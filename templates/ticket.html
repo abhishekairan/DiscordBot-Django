@@ -1,0 +1,26 @@
+{% include 'base.html' %}
+
+
+{% block content %}
+
+<form class="col-4 mx-auto card p-3 shadow-lg" method="post" action="">
+    {% csrf_token %}
+
+    <div class="mb-3">
+        <label for="Channel" class="form-label">Channel ID</label>
+        <input type="text" class="form-control" id="channel" name="channel" placeholder="00000000000000000000" value=1061156604583624734>
+    </div>
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title" value="test">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" class="form-control" id="description" name="description" value="test">
+    </div>
+
+    <button type="submit">Submit</button>
+
+</form>
+    
+{% endblock content %}

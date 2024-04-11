@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block serverList %}
+
+{% for guild in guilds %}
+<div class="server">
+    {% if guild.id not in joinedGuilds %}
+
+        <a target="_blank" href="https://discord.com/oauth2/authorize?client_id=911086684135895040&permissions=8&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Fhome&scope=bot&guild_id={{guild.id}}">
+        {% if guild.icon == None %}
+        {% load static %}
+        <img class="defaultGuildIcon grayGuildIcon" src="{% static 'Icons\deafult-icon.jpg' %}" alt=""></a>
+        {% else %}
+        <img class="grayGuildIcon" src="https://cdn.discordapp.com/icons/{{guild.id}}/{{guild.icon}}.png" alt=""></a>
+        {% endif %}
+    
+    {% else %}
+        
+        <a href="/guild/{{guild.id}}">
+        {% if guild.icon == None %}
+        {% load static %}
+        <img class="defaultGuildIcon" src="{% static 'Icons\deafult-icon.jpg' %}" alt=""></a>
+        {% else %}
+        <img src="https://cdn.discordapp.com/icons/{{guild.id}}/{{guild.icon}}.png" alt=""></a>
+        {% endif %}
+
+    {% endif %}
+    <h3>{{guild.name}}</h3>
+</div>
+{% endfor %}
+ 
+{% endblock serverList %}
+
+{% comment %} {{user.username}}
+{% for guild in guilds %}
+{{guild.name}}<br>
+<a href="/guild/{{guild.id}}">
+<img src= 'https://cdn.discordapp.com/icons/{{guild.id}}/{{guild.icon}}.png'>
+</a>
+{% endfor %} {% endcomment %}

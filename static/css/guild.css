@@ -1,0 +1,153 @@
+nav {
+    position: relative;
+    margin: 60px auto 0;
+    width: 90vw;
+    height: 50px;
+    background: rgb(49, 51, 56);
+    border-radius: 8px;
+    font-size: 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+    min-width: 200px;
+}
+
+nav a {
+    font-size: 21px;
+    text-transform: uppercase;
+    color: #7289DA;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+nav .animation {
+    position: absolute;
+    height: 48px;
+    top: 0;
+    border: 1px solid #264653;
+    box-shadow: 0 2px 3px 0 rgba(148, 148, 148, 0.5);
+    border-radius: 8px;
+}
+
+nav a:nth-child(1) {
+    width: 100px;
+    
+}
+
+nav .start-message,
+a:nth-child(1):hover~.animation {
+    width: 130px;
+    left: -5px;
+}
+
+nav a:nth-child(2) {
+    width: 110px;
+    left: 40px;
+}
+
+nav .start-channel,
+a:nth-child(2):hover~.animation {
+    width: 130px;
+    left: 130px;
+}
+
+nav a:nth-child(3) {
+    width: 100px;
+}
+
+nav .start-blog,
+a:nth-child(3):hover~.animation {
+    width: 100px;
+    left: 210px;
+}
+
+nav a:nth-child(4) {
+    width: 160px;
+}
+
+nav .start-portfolio,
+a:nth-child(4):hover~.animation {
+    width: 160px;
+    left: 310px;
+}
+
+nav a:nth-child(5) {
+    width: 100px;
+}
+
+nav .start-contact,
+a:nth-child(5):hover~.animation {
+    width: 118px;
+    left: 470px;
+}
+
+
+.configpanel{
+    width: 90vw;
+    margin: auto;
+    padding: 50px;
+    border: 2px solid white;
+    color: #7289DA;
+    font-size: 21px;
+}
+.selectchannel{
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: gray;
+    font-family: "Uni Sans He~avy";
+}
+.submit{
+    height: 55px;
+    width: 100px;
+    background: gray;
+    border-radius: 20px;
+}
+table tr td, table tr th{
+    background-color: rgb(49, 51, 56) !important;
+    color: white !important;
+}
+
+.btnbutton {
+  font-family:'Open Sans';
+  font-size: 16px;
+  font-weight:400;
+  display:inline-block;
+  color:#FFF;
+  border-radius: .25em;
+  text-shadow: -1px -1px 0px rgba(0,0,0,0.4);
+}
+
+.btnprimary {
+  line-height:40px;
+  transition:ease-in-out .2s;
+  padding: 0 16px;
+}
+
+.btnprimary:hover{
+  transform:scale(1.02);
+  box-shadow:2px 2px 5px rgba(0,0,0,0.20), inset 0 0 0 99999px rgba(0,0,0,0.2);
+}
+
+.btndelete:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size:1rem;
+  padding-right:12px;
+  background:none;
+  color:#FFF;
+}
+
+.btndelete{
+  background: rgb(192, 57, 43);
+  
+  &:before {
+    content: "\f1f8";
+  }
+}

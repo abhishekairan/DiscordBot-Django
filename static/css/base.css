@@ -1,0 +1,154 @@
+body {
+  background-color: rgb(49, 51, 56);
+}
+* {
+  margin: 0;
+  padding: 0;
+
+}
+.Feature {
+  height: 20vh;
+  width: 95vw;
+  margin: auto;
+  /* border: 2px solid black; */
+}
+
+.head {
+  height: 10vh;
+  width: 95vw;
+  margin: auto;
+  /* border: 2px solid green; */
+  /* background-color: lemonchiffon; */
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  box-shadow: 0px 15px 10px -15px;
+}
+
+.headSpan {
+  display: inline-block;
+  height: inherit;
+  width: 30vh;
+  /* background-color: cornflowerblue; */
+  /* border: 2px solid red; */
+  /* text-decoration: none; */
+}
+
+.headerlogo {
+  font-size: 52px; 
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  letter-spacing: 5px;
+}
+
+.bluetext {
+  font-family: "Uni Sans Heavy";
+  color: #7289DA;
+}
+
+.heading {
+  font-size: 52px;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  margin-top: 20px;
+  letter-spacing: 10px;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.name {
+  width: 50vw;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper-buttons {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+.blue-button { 
+  background-color: #7289da;
+  border: 2px solid #7289da;
+  color: #fff;
+  display: inline-block;
+  font-family: Whitney, "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 45px;
+  width: 150px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding-top: 10px;
+}
+
+.botFeature1 {
+  margin-top: 15vh;
+  padding-bottom: 10px;
+  height: 5vh;
+}
+
+.ftitle h2{
+  display: flex;
+  justify-content: center;
+  font-size: 52px;
+}
+
+.serverList {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.serverListPara{
+  font-size: 32px;
+}
+.server {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;  
+  flex-direction: column;
+}
+.defaultGuildIcon{
+  padding-bottom: 15px;
+  height: 142px;
+  width: 128px;
+  border-radius: 50%;
+}
+.grayGuildIcon{
+  filter: grayscale(100%);
+}
+.server h3{
+  color: gray;
+  font: 30px "Times New Roman";
+}
+
+.serverTitle{
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.serverTitle img{
+  align-self: flex-start;
+  border-radius: 50%;
+}
+
+.serverName{
+  padding: 30px 30px;
+  /* padding-top: 30px;
+  padding-left: 30px; */
+  font-size: 54px;
+}

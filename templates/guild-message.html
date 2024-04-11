@@ -1,0 +1,60 @@
+{% extends "guild.html" %}
+{% block navOption %}
+
+
+<div class="configpanel">
+    
+
+    <div class="messageList">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Message ID</th>
+                <th scope="col">Content</th>
+                <th scope="col">Channel Name</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for message in messages %}
+                <tr>
+                    <th scope="row"><a href="https://discord.com/channels/{{message.channel.guildid.guildid}}/{{message.channel.id}}/{{message.id}}" target="_blank">{{message.id}}</a></th>
+                    <td>{{message.content}}</td>
+                    <td>{{message.channel.name}}</td>
+                    <td><a href="/delete/message/{{message.channel.id}}/{{message.id}}/{{guild.guildid}} " class="btnbutton btnprimary btndelete">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>    
+    </div>
+
+
+    <form class="sendmessage" method="post" action="">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="message" class="">Message</label>
+            <textarea class="" id="message" name="description" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="channels" class="">Channels</label>
+            <select class="selectchannel" name="channels" id="channels">
+                
+                {% for channel in channels %}
+                
+                    {% if channel.type == 0 %}
+                        <option value="{{channel.id}}"># {{channel.name}}</option>
+                        
+                    {% endif %}
+                    
+                {% endfor %}
+                    
+            </select>
+        </div>
+    
+    
+        <button type="submit" class="submit">Submit</button>
+    
+    </form>
+    </div>
+    
+{% endblock navOption %}

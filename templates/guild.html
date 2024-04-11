@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block link %}
+
+{% load static %}
+<link href="{% static 'css/guild.css' %}" rel="stylesheet"/>
+{% endblock link %}
+    
+
+{% block content %}
+
+<div class="serverTitle">
+    {% if guild.iconhash == None %}
+    {% load static %}
+    <img class="defaultGuildIcon" src="{% static 'Icons\deafult-icon.jpg' %}" alt=""></a>
+    <h1 class="bluetext serverName">{{guild.name}}</h1>
+    <img class="defaultGuildIcon" src="{% static 'Icons\deafult-icon.jpg' %}" alt=""></a>
+    {% else %}
+    <img src="https://cdn.discordapp.com/icons/{{guild.guildid}}/{{guild.iconhash}}.png" alt="">
+    <h1 class="bluetext serverName">{{guild.name}}</h1>
+    <img src="https://cdn.discordapp.com/icons/{{guild.guildid}}/{{guild.iconhash}}.png" alt="">
+    {% endif %}
+
+    
+    {% if bot_joinable == "true" %}
+        <h3 class='bluetext'>Invite Bot</h3>
+    {% endif %}
+</div>
+
+<div class="OptionSelector">
+    <nav>
+        <a href="/guild/message/{{guild.guildid}}">Messages</a>
+        <a href="/guild/channels/{{guild.guildid}}">Channels</a>
+        {% comment %} <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a> {% endcomment %}
+         <div class ="animation start-message"></div>
+         <div class ="animation start-channel"></div>
+      </nav>
+</div>
+
+{% block navOption %}
+    
+{% endblock navOption %}
+    
+
+{% endblock content %}

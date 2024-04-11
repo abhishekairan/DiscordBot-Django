@@ -1,0 +1,30 @@
+{% extends "guild.html" %}
+{% block navOption %}
+
+
+<div class="configpanel">
+    
+    <div class="messageList">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Channel ID</th>
+                <th scope="col">Channel Name</th>
+                <th scope="col">Type</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for channel in channels %}
+                <tr>
+                    <th scope="row"><a href="https://discord.com/channels/{{channel.guildid.guildid}}/{{channel.id}}" target="_blank">{{channel.id}}</a></th>
+                    <td>{{channel.name}}</td>
+                    <td>{{channel.type}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>    
+    </div>
+<div>
+    
+    
+{% endblock navOption %}
